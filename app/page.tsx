@@ -58,7 +58,8 @@ const fetchHomeContent = async () => {
 		const options = {
 			method: 'POST',
 			headers,
-			body: JSON.stringify(requestBody)
+			body: JSON.stringify(requestBody),
+      next: { revalidate: 60 },
 		};
 		const response = await (
 			await fetch(
