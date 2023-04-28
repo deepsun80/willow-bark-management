@@ -1,0 +1,22 @@
+@import 'mixins';
+
+.main {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+
+  .oneColSection {
+    @include container;
+  }
+
+  .threeColSection {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .link {
+    margin: auto;
+  }
+}

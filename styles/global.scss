@@ -1,0 +1,19 @@
+:root {
+  --color-primary: #008000;
+  --color-secondary: #800080;
+  --color-body: #34282C;
+  --color-white: #ffffff;
+}
+
+body {
+  color: var(--color-body);
+  padding: 0;
+  margin: 0;
+}
+
+.mainWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}

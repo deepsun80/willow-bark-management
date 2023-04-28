@@ -1,0 +1,30 @@
+.footer {
+    background-color: var(--color-body);
+    padding: 1em 2em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10%;
+
+    .colOne, .colTwo {
+        display: flex;
+        flex-direction: column;
+    }
+    .colOne {
+        list-style: none;
+        align-items: flex-end;
+    }
+
+    .header, .link {
+        color: var(--color-white);
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .disclaimer {
+        text-align: center;
+        grid-column: 1 / 3;
+    }
+}

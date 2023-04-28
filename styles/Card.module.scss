@@ -1,0 +1,21 @@
+@import 'mixins';
+
+.card {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 300px 1fr;
+    gap: 1em;
+
+    @include respond-above(small) {
+        grid-template-columns: 450px 1fr;
+        grid-template-rows: 300px;
+    }
+
+    .col {
+        height: auto;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
