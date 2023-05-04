@@ -37,7 +37,7 @@ const fetchHomeContent = async () => {
               }
             }
           }
-          blogCollection(limit:3) {
+          blogCollection(limit:2) {
             items {
               __typename
               blogSlug
@@ -98,20 +98,25 @@ export default async function Home() {
             />
           </section>
           <section className={styles.threeColSection}>
-            {homeContent?.blogs.map((blog, index) => {
-              return (
-                <Card
-                  key={index}
-                  header={blog.blogTitle} 
-                  content=''
-                  image={blog.blogImage}
-                  link={`blog/${blog.blogSlug}`}
-                  linkText='Read'
-                />
-              )
-            })}
+            <h2 className={styles.heading}>Articles</h2>
+            <div className={styles.threeColWrapper}>
+              {homeContent?.blogs.map((blog, index) => {
+                return (
+                  <Card
+                    key={index}
+                    header={blog.blogTitle} 
+                    content=''
+                    image={blog.blogImage}
+                    link={`blog/${blog.blogSlug}`}
+                    linkText='Read'
+                  />
+                )
+              })}
+            </div>
+            <div className={styles.linkWrapper}>
+              <Link href='/blog' className={styles.link}>Read all articles</Link>
+            </div>
           </section>
-          <Link href='/blog' className={styles.link}>Read all articles</Link>
         </>
       )}
     </main>

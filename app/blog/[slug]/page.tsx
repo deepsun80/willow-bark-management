@@ -52,7 +52,7 @@ async function Blog({ params }:{ params: { slug: string }}) {
     const blogC = await fetchBlogContent(params.slug)
 
     return (
-        <main className={styles.main}>
+        <main className={styles.main} style={{ margin: '2em auto' }}>
             {blogC && (
                 <section className={styles.oneColSection}>
                     <Card

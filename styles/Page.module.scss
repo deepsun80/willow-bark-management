@@ -12,11 +12,43 @@
   }
 
   .threeColSection {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    background-color: var(--color-off-white);
+    padding: 2em 0;
+
+    .threeColWrapper {
+      @include container;
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 2em;
+  
+      @include respond-above(small) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .linkWrapper {
+      text-align: center;
+      font-weight: 600;
+      margin-top: 1em;
+      
+      @include respond-above(small) {
+        margin-top: 2em;
+      }
+    }
   }
 
   .link {
-    margin: auto;
+    color: var(--color-primary);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .heading {
+    text-align: center;
+    @include mb;
+    margin-bottom: 1em;
   }
 }

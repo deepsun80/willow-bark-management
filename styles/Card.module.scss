@@ -18,4 +18,17 @@
         flex-direction: column;
         justify-content: center;
     }
+
+    .heading, .content {
+        @include mb();
+    }
+
+    .link {
+        color: var(--color-primary);
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 }

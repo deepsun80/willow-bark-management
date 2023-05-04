@@ -50,7 +50,7 @@ async function About() {
     const aboutContent = await fetchAboutContent()
 
     return (
-        <main className={styles.main}>
+        <main className={styles.main} style={{ margin: '2em auto' }}>
             {aboutContent && (
                 <section className={styles.oneColSection}>
                     <Card

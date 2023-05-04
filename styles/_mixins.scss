@@ -26,9 +26,13 @@ $breakpoints: (
 
 @mixin container() {
   margin: auto;
-  max-width: 90%;
+  width: 90%;
 
   @include respond-above(small) {
     max-width: 1366px;
   }
+}
+
+@mixin mb() {
+  margin-bottom: 10px;
 }

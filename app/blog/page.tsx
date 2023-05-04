@@ -53,7 +53,15 @@ async function Blog() {
 
     return (
         <main className={styles.main}>
-            <section className={styles.oneColSection}>
+            <section 
+                className={styles.oneColSection} 
+                style={{
+                    margin: '2em auto',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: '2em'
+                }}
+            >
                 {blogs?.map((blog, index) => {
                     return (
                         <Card

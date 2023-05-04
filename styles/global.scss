@@ -3,12 +3,17 @@
   --color-secondary: #800080;
   --color-body: #34282C;
   --color-white: #ffffff;
+  --color-off-white: #d7d7d7;
 }
 
 body {
   color: var(--color-body);
   padding: 0;
   margin: 0;
+
+  * {
+    margin: 0;
+  }
 }
 
 .mainWrapper {

@@ -1,18 +1,26 @@
+@import 'mixins';
+
 .footer {
     background-color: var(--color-body);
     padding: 1em 2em;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10%;
+    
+    .mainContainer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10%;
+        @include container;
 
-    .colOne, .colTwo {
-        display: flex;
-        flex-direction: column;
+        .colOne, .colTwo {
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+        }
+        .colOne {
+            list-style: none;
+            padding: 0;
+        }
     }
-    .colOne {
-        list-style: none;
-        align-items: flex-end;
-    }
+
 
     .header, .link {
         color: var(--color-white);
@@ -24,7 +32,10 @@
     }
 
     .disclaimer {
+        margin-top: 5vh;
         text-align: center;
         grid-column: 1 / 3;
+        font-size: 0.8em;
+        font-weight: 600;
     }
 }

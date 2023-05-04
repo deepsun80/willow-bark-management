@@ -16,17 +16,20 @@ type Props = {
 function Card({ header, content, image, link, linkText }: Props) {
     return (
         <div className={styles.card}>
+            {image?.url && 
+                <div className={styles.col}>
+                    <Image
+                        // loader={myLoader}
+                        src={image?.url}
+                        alt={image?.description}
+                        fill
+                        className={styles.image}
+                    />
+                </div>
+            }
             <div className={styles.col}>
-                <Image
-                    // loader={myLoader}
-                    src={image?.url}
-                    alt={image?.description}
-                    fill
-                />
-            </div>
-            <div className={styles.col}>
-                <h3>{header}</h3>
-                <p>{content}</p>
+                {header && <h3 className={styles.heading}>{header}</h3>}
+                {content && <p className={styles.content}>{content}</p>}
                 {link && (
                     <Link href={link} className={styles.link}>
                         {linkText} More

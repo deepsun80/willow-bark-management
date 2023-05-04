@@ -15,6 +15,7 @@ function Hero({ bannerProps }: { bannerProps: Banner }) {
                 backgroundRepeat: 'no-repeat',
                 backgroundSize: 'cover',
                 backgroundPositionY: '30%',
+                backgroundPositionX: '50%',
                 position: 'relative'
             }}
         >

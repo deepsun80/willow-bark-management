@@ -6,7 +6,7 @@ import { navItems } from '@/utils'
 function Nav() {
   return (
     <div className={styles.nav}>
-      <div className={styles.logo}>Willow Bark Management</div>
+      <Link href={navItems[0].link} className={styles.logo}>Willow Bark Management</Link>
       <ul className={styles.navItems}>
         {navItems.map((item, index) => {
           return (
