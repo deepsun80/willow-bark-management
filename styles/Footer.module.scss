@@ -32,6 +32,9 @@
     }
 
     .disclaimer {
+        color: var(--color-white);
+        border-top: 0.5px solid rgba(255, 255, 255, 0.5);
+        padding-top: 1em;
         margin-top: 5vh;
         text-align: center;
         grid-column: 1 / 3;

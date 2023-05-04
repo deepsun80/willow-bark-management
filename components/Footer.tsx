@@ -22,6 +22,7 @@ function Footer() {
             </div>
         </div>
         <div className={styles.disclaimer}>
+            <p style={{ marginBottom: '1em' }}>Copyright &copy; {new Date().getFullYear()}</p>
             <a 
                 href='https://sandeep-chandran-web-dev-portfolio.netlify.app/'
                 target='_blank'
