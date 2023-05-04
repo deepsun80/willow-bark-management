@@ -25,4 +25,5 @@ export type Blog = {
     blogTitle: string
     blogImage: Image
     blogContent: any
+    sys: any
 }

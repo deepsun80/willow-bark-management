@@ -54,6 +54,7 @@ async function About() {
             {aboutContent && (
                 <section className={styles.oneColSection}>
                     <Card
+                        date=''
                         header={aboutContent[0].aboutHeader} 
                         content={aboutContent[0].aboutDescription}
                         image={aboutContent[0].aboutImage} 

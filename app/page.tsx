@@ -50,6 +50,9 @@ const fetchHomeContent = async () => {
               blogContent {
                 json
               }
+              sys {
+                publishedAt
+              }
             }
           }
         }
@@ -90,6 +93,7 @@ export default async function Home() {
           <Hero bannerProps={homeContent?.banner[0]} />
           <section className={styles.oneColSection}>
             <Card
+              date=''
               header={homeContent?.about[0].aboutHeader} 
               content={homeContent?.about[0].aboutSnippet}
               image={homeContent?.about[0].aboutImage} 
@@ -97,14 +101,15 @@ export default async function Home() {
               linkText='Learn'
             />
           </section>
-          <section className={styles.threeColSection}>
+          <section className={styles.twoColSection}>
             <h2 className={styles.heading}>Articles</h2>
-            <div className={styles.threeColWrapper}>
+            <div className={styles.twoColWrapper}>
               {homeContent?.blogs.map((blog, index) => {
                 return (
                   <Card
                     key={index}
-                    header={blog.blogTitle} 
+                    header={blog.blogTitle}
+                    date={blog.sys.publishedAt.replace(/T.*/,'').split('-').reverse().join('-')} 
                     content=''
                     image={blog.blogImage}
                     link={`blog/${blog.blogSlug}`}

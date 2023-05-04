@@ -24,6 +24,9 @@ const fetchBlogContent = async (slug: string) => {
                             blogContent {
                                 json
                             }
+                            sys {
+                                publishedAt
+                            }
                         }
                     }
                 }
@@ -56,6 +59,7 @@ async function Blog({ params }:{ params: { slug: string }}) {
             {blogC && (
                 <section className={styles.oneColSection}>
                     <Card
+                        date={blogC[0].sys.publishedAt.replace(/T.*/,'').split('-').reverse().join('-')} 
                         header={blogC[0].blogTitle} 
                         content={documentToReactComponents(blogC[0].blogContent.json)}
                         image={blogC[0].blogImage} 

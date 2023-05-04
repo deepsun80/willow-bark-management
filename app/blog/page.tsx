@@ -13,17 +13,20 @@ const fetchBlogs = async () => {
                 query {
                     blogCollection(limit:20) {
                         items {
-                        __typename
-                        blogSlug
-                        blogTitle
-                        blogImage {
-                            title
-                            description
-                            url
-                        }
-                        blogContent {
-                            json
-                        }
+                            __typename
+                            blogSlug
+                            blogTitle
+                            blogImage {
+                                title
+                                description
+                                url
+                            }
+                            blogContent {
+                                json
+                            }
+                            sys {
+                                publishedAt
+                            }
                         }
                     }
                 }
@@ -66,6 +69,7 @@ async function Blog() {
                     return (
                         <Card
                             key={index}
+                            date={blog.sys.publishedAt.replace(/T.*/,'').split('-').reverse().join('-')} 
                             header={blog.blogTitle} 
                             content=''
                             image={blog.blogImage}

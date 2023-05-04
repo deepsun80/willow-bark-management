@@ -19,10 +19,14 @@
         justify-content: center;
     }
 
-    .heading, .content {
+    .heading, .content, .date {
         @include mb();
     }
 
+    .date {
+        color:  var(--color-grey);
+    }
+    
     .link {
         color: var(--color-primary);
         text-decoration: none;

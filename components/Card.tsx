@@ -10,10 +10,11 @@ type Props = {
     image: ImageType
     content: any
     link: string,
-    linkText: string
+    linkText: string,
+    date: string
 }
 
-function Card({ header, content, image, link, linkText }: Props) {
+function Card({ header, content, image, link, linkText, date }: Props) {
     return (
         <div className={styles.card}>
             {image?.url && 
@@ -29,6 +30,7 @@ function Card({ header, content, image, link, linkText }: Props) {
             }
             <div className={styles.col}>
                 {header && <h3 className={styles.heading}>{header}</h3>}
+                {date && <p className={styles.date}><i>{date}</i></p>}
                 {content && <p className={styles.content}>{content}</p>}
                 {link && (
                     <Link href={link} className={styles.link}>

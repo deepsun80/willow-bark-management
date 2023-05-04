@@ -11,11 +11,11 @@
     @include container;
   }
 
-  .threeColSection {
+  .twoColSection {
     background-color: var(--color-off-white);
     padding: 2em 0;
 
-    .threeColWrapper {
+    .twoColWrapper {
       @include container;
       display: grid;
       grid-template-columns: repeat(1, 1fr);
